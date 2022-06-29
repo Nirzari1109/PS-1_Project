@@ -1,0 +1,443 @@
+<! Doc Type HTML>
+<html>
+  <head>
+  <! Favicon>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+  
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+/* Banner styling */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+  url("Banner1.png");
+  height: 37%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+/* Footer */
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   color: black;
+   text-align: right;
+}
+
+</style>
+</head>
+<body>
+<! Banner>
+<div class="hero-image">
+</div>
+
+<! Status Bar>
+<div class="w3-container w3-indigo">
+ <h5 style="text-shadow:2px 2px 0 #444"; style="color: white"; id="displayDateTime">
+  <script type="text/javascript">
+  var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date+' '+time;
+
+  document.getElementById("displayDateTime").innerHTML =  ' ' + daylist[day] + ' ' + dateTime + ' ' + 
+  '+ GMT 0530 (Indian Standard Time)';
+
+  </script>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drive Monitoring Control 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fa fa-fw fa-user"></i></a>User/Role</h5>
+  </div>
+  
+  
+ <! Menu Bar>
+
+<div class="w3-bar w3-indigo">
+  <button style="text-shadow:1px 1px 0 #444"; class="w3-bar-item w3-button w3-round" onclick="opentab('Home')">Home</button>
+  <button style="text-shadow:1px 1px 0 #444"; class="w3-bar-item w3-button w3-round" onclick="opentab('Masters')">Masters</button>
+  <button style="text-shadow:1px 1px 0 #444"; class="w3-bar-item w3-button w3-round" onclick="opentab('Provision Meters')">Provision Meters</button>
+</div>
+
+<div id="Home" class="w3-container tab">
+<! Home Page Content>
+ 
+ 
+ <br>
+<br>
+
+<div class="w3-container">
+
+  <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
+    <thead>
+      <tr class="w3-light-grey">
+        <th>Motor No. (DID)</th>
+        <th>Axis</th>
+        <th>Speed</th>
+        <th>Direction</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>ReMo001</td>
+      <td>X-axis</td>
+      <td>21568</td>
+      <td></td>
+    </tr>
+     <tr>
+      <td></td>
+      <td>Y-axis</td>
+      <td>32456</td>
+      <td></td>
+    </tr> <tr>
+      <td></td>
+      <td>Z-axis</td>
+      <td>23746</td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>ReMo002</td>
+      <td>X-axis</td>
+      <td>21568</td>
+      <td></td>
+    </tr>
+     <tr>
+      <td></td>
+      <td>Y-axis</td>
+      <td>32456</td>
+      <td></td>
+    </tr> <tr>
+      <td></td>
+      <td>Z-axis</td>
+      <td>23746</td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>ReMo003</td>
+      <td>X-axis</td>
+      <td>21568</td>
+      <td></td>
+    </tr>
+     <tr>
+      <td></td>
+      <td>Y-axis</td>
+      <td>32456</td>
+      <td></td>
+    </tr> <tr>
+      <td></td>
+      <td>Z-axis</td>
+      <td>23746</td>
+      <td></td>
+    </tr>
+    
+ </table>
+  
+</div>
+
+<br>
+<br>
+
+<h2  style="text-align:center"> Health Status </h2>
+<br>
+<br>
+
+<div class="w3-container">
+
+  <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
+    <thead>
+      <tr class="w3-light-grey">
+        <th>Motor No. (DID)</th>
+        <th>Axis</th>
+        <th>Temperature</th>
+        <th>Vibrations</th>
+		<th>Current</th>
+		<th>Voltage</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>ReMo001</td>
+      <td>X-axis</td>
+      <td></td>
+      <td></td>
+	  <td></td>
+      <td></td>
+    </tr>
+     <tr>
+      <td></td>
+      <td>Y-axis</td>
+      <td></td>
+      <td></td>
+	  <td></td>
+      <td></td>
+    </tr> <tr>
+      <td></td>
+      <td>Z-axis</td>
+      <td></td>
+      <td></td>
+	  <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>ReMo002</td>
+      <td>X-axis</td>
+      <td></td>
+      <td></td>
+	  <td></td>
+      <td></td>
+    </tr>
+     <tr>
+      <td></td>
+      <td>Y-axis</td>
+      <td></td>
+      <td></td>
+	  <td></td>
+      <td></td>
+    </tr> <tr>
+      <td></td>
+      <td>Z-axis</td>
+      <td></td>
+      <td></td>
+	  <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>ReMo003</td>
+      <td>X-axis</td>
+      <td></td>
+      <td></td>
+	  <td></td>
+      <td></td>
+    </tr>
+     <tr>
+      <td></td>
+      <td>Y-axis</td>
+      <td></td>
+      <td></td>
+	  <td></td>
+      <td></td>
+    </tr> <tr>
+      <td></td>
+      <td>Z-axis</td>
+      <td></td>
+      <td></td>
+	  <td></td>
+      <td></td>
+    </tr>
+    
+ </table>
+  
+</div>
+
+<br>
+<br>
+
+<h2  style="text-align:center"> Graphical Representation of the above statistics </h2>
+<br>
+<br>
+ 
+</div>
+
+<div id="Masters" class="w3-container tab" style="display:none">
+<! Masters Page Content>
+ <br>
+  <div class="w3-container">  
+<button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-white w3-centre-align">Remo Device Master</button>
+<div id="Demo1" class="w3-container w3-hide">
+<! Tabular Data ----------------------------------------------------------------------------->
+  <div class="w3-container">
+  <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
+    <thead>
+      <tr class="w3-light-grey">
+        <th>Model</th>
+        <th>Description</th>
+        <th>DID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>ReMo001</td>
+      <td>This is 3 axis controller	for DC Motor 1</td>
+      <td>12345	</td>
+      <td>&nbsp;&nbsp;&#x1F58D;/&#128465;</td>
+    </tr>
+    <tr>
+      <td>ReMo002</td>
+      <td>This is 3 axis controller for DC Motor 2</td>
+      <td>12346</td>
+      <td>&nbsp;&nbsp;&#x1F58D;/&#128465;</td>
+    </tr>
+    <tr>
+      <td>ReMo003</td>
+      <td>	This is 3 axis controller for DC Motor 3</td>
+      <td>12347</td>
+      <td>&nbsp;&nbsp;&#x1F58D;/&#128465;</td>
+    </tr>
+  </table>
+</div>
+<!-------------------------------------------------------------------------------------------->
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<hr class="solid">
+
+
+<div class="w3-container">  
+<button onclick="myFunction('Demo2')" class="w3-btn w3-block w3-white w3-centre-align">Remo Gateway Master</button>
+<div id="Demo2" class="w3-container w3-hide">
+  <h4>Tabular data 2</h4>
+  <p>data 2</p>
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<hr class="solid">
+
+
+
+<div class="w3-container">  
+<button onclick="myFunction('Demo3')" class="w3-btn w3-block w3-white w3-centre-align">Energy Meter OEM Master</button>
+<div id="Demo3" class="w3-container w3-hide">
+  <h4>Tabular data 3</h4>
+  <p>data 3</p>
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<hr class="solid">
+
+
+
+<div class="w3-container">  
+<button onclick="myFunction('Demo4')" class="w3-btn w3-block w3-white w3-centre-align">Energy Meter Master</button>
+<div id="Demo4" class="w3-container w3-hide">
+  <h4>Tabular data 4</h4>
+  <p>data 4</p>
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<hr class="solid">
+
+
+
+<div class="w3-container">  
+<button onclick="myFunction('Demo5')" class="w3-btn w3-block w3-white w3-centre-align">Energy Meters Register Master</button>
+<div id="Demo5" class="w3-container w3-hide">
+  <h4>Tabular data 5</h4>
+  <p>data 5</p>
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<hr class="solid">
+
+
+
+
+</div>
+
+<div id="Provision Meters" class="w3-container tab" style="display:none">
+<!Provision Meters Page Content>
+  <h2>Provision Meters</h2>
+</div>
+
+<script>
+function opentab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(tabName).style.display = "block";  
+}
+</script>
+
+
+
+
+<! Footer>
+<div class="footer">
+  <p>Powered by ReMoNet®, © Shalaka Connected Devices
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</div>
+
+
+
+
+</body>
+ 
+</html>
