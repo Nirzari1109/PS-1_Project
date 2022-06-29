@@ -1,0 +1,827 @@
+<!Doc Type HTML>
+<html>
+<head>
+<!-- Favicon -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!--Favicon END --> 
+  
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+/* Banner styling */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+  url("Banner1.png");
+  height: 37%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/*Button Styling*/
+.btn {
+  background-color: white;
+  border: none;
+  color: red;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #076cbe;
+  color: white;
+}
+
+.btnp {
+  background-color: white;
+  border: none;
+  color: red;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+
+/* Darker background on mouse-over */
+.btnp:hover {
+  background-color: #076cbe;
+  color: white;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+/* Footer */
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   color: black;
+   text-align: right;
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- Banner -->
+<div class="hero-image">
+</div>
+<!-- Banner END-->
+
+
+<!-- Status Bar -->
+<div class="w3-container w3-indigo">
+ <h5 style="text-shadow:2px 2px 0 #444"; style="color: white"; id="displayDateTime">
+  <script type="text/javascript">
+  var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date+' '+time;
+
+  document.getElementById("displayDateTime").innerHTML =  ' ' + daylist[day] + ' ' + dateTime + ' ' + 
+  '+ GMT 0530 (Indian Standard Time)';
+ </script>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drive Monitoring Control 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fa fa-fw fa-user"></i></a>User/Role</h5>
+  </div>
+<!-- Status Bar END -->
+
+
+
+ 
+<!-- Menu Bar -->
+
+<div class="w3-bar w3-indigo">
+  <button style="text-shadow:1px 1px 0 #444"; class="w3-bar-item w3-button w3-round" onclick="opentab('Home')">Home</button>
+  <button style="text-shadow:1px 1px 0 #444"; class="w3-bar-item w3-button w3-round" onclick="opentab('Masters')">Masters</button>
+  <button style="text-shadow:1px 1px 0 #444"; class="w3-bar-item w3-button w3-round" onclick="opentab('Provision Drives')">Provision Drives</button>
+</div>
+<!-- Menu Bar END-->
+
+
+
+
+
+<div id="Home" class="w3-container tab">
+<!-- Home Page Content --> 
+
+<div class="w3-container">
+
+<br>
+<h3  style="text-align:center"> Health Status </h3>
+
+  <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
+    <thead>
+      <tr class="w3-light-grey">
+        <th>Motor No. (DID)</th>
+        <th>Axis</th>
+        <th>Speed</th>
+        <th>Direction</th>
+		<th>Temperature</th>
+        <th>Vibrations</th>
+		<th>Current</th>
+		<th>Voltage</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>ReMo001</td>
+      <td>X-axis</td>
+      <td>21568</td>
+      <td>counter-clock</td>
+	  <td>34</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+     <tr>
+      <td></td>
+      <td>Y-axis</td>
+      <td>32456</td>
+      <td>clock</td>
+	  <td>45</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr> <tr>
+      <td></td>
+      <td>Z-axis</td>
+      <td>23746</td>
+      <td>counter-clock</td>
+	  <td>48</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+    
+    <tr>
+      <td>ReMo002</td>
+      <td>X-axis</td>
+      <td>21568</td>
+      <td>clock</td>
+	  <td>49</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+     <tr>
+      <td></td>
+      <td>Y-axis</td>
+      <td>32456</td>
+      <td>counter-clock</td>
+	  <td>56</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr> <tr>
+      <td></td>
+      <td>Z-axis</td>
+      <td>23746</td>
+      <td>clock</td>
+	  <td>67</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+    
+    <tr>
+      <td>ReMo003</td>
+      <td>X-axis</td>
+      <td>21568</td>
+      <td>counter-clock</td>
+	  <td>37</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+     <tr>
+      <td></td>
+      <td>Y-axis</td>
+      <td>32456</td>
+      <td>clock</td>
+	  <td>42</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr> <tr>
+      <td></td>
+      <td>Z-axis</td>
+      <td>23746</td>
+      <td>counter-clock</td>
+	  <td>23</td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
+    </tr>
+    
+ </table>
+  
+</div>
+<br>
+<br>
+<!-- Graphs and Charts-->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <script type="text/javascript">
+
+    $(function() {
+
+    Highcharts.chart('container', {
+
+        title: {
+
+            text: 'Data extracted from above Health Status Table'
+
+        },
+
+        subtitle: {
+
+            text: 'DC_Motor_Health_Status'
+
+        },
+
+        yAxis: {
+
+            title: {
+
+                text: ''
+
+            }
+
+        },
+
+        legend: {
+
+            layout:'vertical',
+
+            align: 'right',
+
+            verticalAlign:'middle'
+
+        },
+
+        plotOptions: {
+
+        series: {
+
+            label: {
+
+                connectorAllowed: false
+
+            },
+
+            pointStart: 001
+
+         }
+
+       },
+
+       series: [{
+
+        name: 'Speed',
+
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+
+        }, {
+
+        name: 'Direction',
+
+        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+
+        }, {
+
+        name: 'Temperature',
+
+        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+
+        }, {
+
+        name: 'Vibrations',
+
+        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+
+        }, {
+
+        name: 'Current',
+
+        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+
+        }, {
+
+        name: 'Voltage',
+
+        data: [14908, 7948, 6105, 14248, 4989, 16816, 15274, 17111]
+
+        }]
+
+      });
+
+    });
+
+    </script>
+	<div id="container" style="width: 100%; height: 400px;">
+
+    </div><br><br>
+
+<!-- Graphs and Charts END-->
+</div>
+
+<!-- Home Page END -->
+
+
+
+
+<div id="Masters" class="w3-container tab" style="display:none">
+<!-- Masters Page Content -->
+ <br>
+  <div class="w3-container">  
+<button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-white w3-centre-align">Remo Drive Master</button>
+<div id="Demo1" class="w3-container w3-hide">
+
+<!-- Tabular Data ----------------------------------------------------------------------------->
+  
+<div id="wrapper">
+<table align='center' cellspacing=2 cellpadding=20 id="data_table" border=1 class="table_wrapper">
+<tr bgcolor="#3f51b5">
+<th style="color: white">Model</th>
+<th style="color: white">Description</th>
+<th style="color: white">DID</th>
+<th style="color: white" colspan="3">Actions</th>
+</tr>
+
+<tr id="row1">
+<td id="model_row1">ReMo001</td>
+<td id="description_row1">This is 3 axis controller for DC Motor 1</td>
+<td id="DID_row1">12345</td>
+
+<td><button class="btnp" id="edit_button1" class="edit" onclick="edit_row1('1')">&#x270E;</button></td>
+<td><button class="btn" id="save_button1" class="save" onclick="save_row1('1')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('1')">&#10006;</button></td>
+</tr>
+
+
+<tr id="row2">
+<td id="model_row2">ReMo002</td>
+<td id="description_row2">This is 3 axis controller for DC Motor 2</td>
+<td id="DID_row2">12346</td>
+
+<td><button class="btnp" id="edit_button2" class="edit" onclick="edit_row1('2')">&#x270E;</button></td>
+<td><button class="btn" id="save_button2" class="save" onclick="save_row1('2')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('2')">&#10006;</button></td>
+</tr>
+
+
+<tr id="row3">
+<td id="model_row3">ReMo003</td>
+<td id="description_row3">This is 3 axis controller for DC Motor 3</td>
+<td id="DID_row3">12347</td>
+
+<td><button class="btnp" id="edit_button3" class="edit" onclick="edit_row1('3')">&#x270E;</button></td>
+<td><button class="btn" id="save_button3" class="save" onclick="save_row1('3')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('3')">&#10006;</button></td>
+</tr>
+
+
+<tr>
+<td><input type="text" id="new_model"></td>
+<td><input type="text" id="new_description"></td>
+<td><input type="text" id="new_DID"></td>
+
+<td><button class="btn" class="add" onclick="add_row1();"><i class="fa fa-plus"></i></button></td>
+</tr>
+
+</table>
+</div>
+
+
+<script>
+function edit_row1(no)
+{
+ document.getElementById("edit_button"+no).style.display="none";
+ document.getElementById("save_button"+no).style.display="block";
+	
+ var model=document.getElementById("model_row"+no);
+ var description=document.getElementById("description_row"+no);
+ var DID=document.getElementById("DID_row"+no);
+	
+ var model_data=model.innerHTML;
+ var description_data=description.innerHTML;
+ var DID_data=DID.innerHTML;
+	
+ model.innerHTML="<input type='text' id='model_text"+no+"' value='"+model_data+"'>";
+ description.innerHTML="<input type='text' id='description_text"+no+"' value='"+description_data+"'>";
+ DID.innerHTML="<input type='text' id='DID_text"+no+"' value='"+DID_data+"'>";
+}
+
+function save_row1(no)
+{
+ var model_val=document.getElementById("model_text"+no).value;
+ var description_val=document.getElementById("description_text"+no).value;
+ var DID_val=document.getElementById("DID_text"+no).value;
+
+ document.getElementById("model_row"+no).innerHTML=model_val;
+ document.getElementById("description_row"+no).innerHTML=description_val;
+ document.getElementById("DID_row"+no).innerHTML=DID_val;
+
+ document.getElementById("edit_button"+no).style.display="block";
+ document.getElementById("save_button"+no).style.display="block";
+}
+
+function delete_row(no)
+{
+ document.getElementById("row"+no+"").outerHTML="";
+}
+function add_row1()
+{
+ var new_model=document.getElementById("new_model").value;
+ var new_description=document.getElementById("new_description").value;
+ var new_DID=document.getElementById("new_DID").value;
+	
+ var table=document.getElementById("data_table");
+ var table_len=(table.rows.length)-1;
+ var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='model_row"+table_len+"'>"+new_model+"</td><td id='description_row"+table_len+"'>"+new_description+"</td><td id='DID_row"+table_len+"'>"+new_DID+"</td><td><input type='button' class='btnp' id='edit_button"+table_len+"' value='&#x270E;' class='edit' onclick='edit_row1("+table_len+")'></td>  <td><input type='button' class='btn' id='save_button"+table_len+"' value='&#10004;' class='save' onclick='save_row1("+table_len+")'></td>  <td><input type='button' class='btn' value=' &#10006;' class='delete' onclick='delete_row("+table_len+")'></td></tr>"; 
+
+ document.getElementById("new_model").value="";
+ document.getElementById("new_description").value="";
+ document.getElementById("new_DID").value="";
+
+}
+</script>
+
+<!-- Tabular Data END ----------------------------------------------------------------------------->
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<hr class="solid">
+
+
+<div class="w3-container" style="overflow-x:auto;">  
+<button onclick="myFunction('Demo2')" class="w3-btn w3-block w3-white w3-centre-align">Drive Register Master</button>
+<div id="Demo2" class="w3-container w3-hide">
+
+<!-- Tabular Data ----------------------------------------------------------------------------->
+
+<div id="wrapper">
+<table align='center' cellspacing=2 cellpadding=20 id="data_tablen" border=1 class="table_wrapper">
+<tr bgcolor="#3f51b5">
+<th style="color: white">Motor No. (DID)</th>
+<th style="color: white">Axis</th>
+<th style="color: white">Speed</th>
+<th style="color: white">Direction</th>
+<th style="color: white">Temperature</th>
+<th style="color: white">Vibrations</th>
+<th style="color: white">Current</th>
+<th style="color: white">Voltage</th>
+<th style="color: white" colspan="3">Actions</th>
+</tr>
+
+<tr id="row1">
+<td id="motor_row1">ReMo001</td>
+<td id="axis_row1">X</td>
+<td id="speed_row1">12345</td>
+<td id="direction_row1">counter-clock</td>
+<td id="temperature_row1">34</td>
+<td id="vibrations_row1"></td>
+<td id="current_row1"></td>
+<td id="voltage_row1"></td>
+
+<td><button class="btnp" id="edit_button1" class="edit" onclick="edit_row('1')">&#x270E;</button></td>
+<td><button class="btn" id="save_button1" class="save" onclick="save_row('1')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('1')">&#10006;</button></td>
+</tr>
+
+<tr id="row2">
+<td id="motor_row2">ReMo001</td>
+<td id="axis_row2">Y</td>
+<td id="speed_row2">12345</td>
+<td id="direction_row2">clock</td>
+<td id="temperature_row2">45</td>
+<td id="vibrations_row2"></td>
+<td id="current_row2"></td>
+<td id="voltage_row2"></td>
+
+<td><button class="btnp" id="edit_button2" class="edit" onclick="edit_row('2')">&#x270E;</button></td>
+<td><button class="btn" id="save_button2" class="save" onclick="save_row('2')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('2')">&#10006;</button></td>
+</tr>
+
+<tr id="row3">
+<td id="motor_row3">ReMo001</td>
+<td id="axis_row3">Z</td>
+<td id="speed_row3">12345</td>
+<td id="direction_row3">counter-clock</td>
+<td id="temperature_row3">45</td>
+<td id="vibrations_row3"></td>
+<td id="current_row3"></td>
+<td id="voltage_row3"></td>
+
+<td><button class="btnp" id="edit_button3" class="edit" onclick="edit_row('3')">&#x270E;</button></td>
+<td><button class="btn" id="save_button3" class="save" onclick="save_row('3')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('3')">&#10006;</button></td>
+</tr>
+
+
+
+
+<tr id="row4">
+<td id="motor_row4">ReMo002</td>
+<td id="axis_row4">X</td>
+<td id="speed_row4">12345</td>
+<td id="direction_row4">counter-clock</td>
+<td id="temperature_row4">46</td>
+<td id="vibrations_row4"></td>
+<td id="current_row4"></td>
+<td id="voltage_row4"></td>
+
+<td><button class="btnp" id="edit_button4" class="edit" onclick="edit_row('4')">&#x270E;</button></td>
+<td><button class="btn" id="save_button4" class="save" onclick="save_row('4')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('4')">&#10006;</button></td>
+</tr>
+
+<tr id="row5">
+<td id="motor_row5">ReMo002</td>
+<td id="axis_row5">Y</td>
+<td id="speed_row5">12345</td>
+<td id="direction_row5">clock</td>
+<td id="temperature_row5">47</td>
+<td id="vibrations_row5"></td>
+<td id="current_row5"></td>
+<td id="voltage_row5"></td>
+
+<td><button class="btnp" id="edit_button5" class="edit" onclick="edit_row('5')">&#x270E;</button></td>
+<td><button class="btn" id="save_button5" class="save" onclick="save_row('5')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('5')">&#10006;</button></td>
+</tr>
+
+<tr id="row6">
+<td id="motor_row6">ReMo002</td>
+<td id="axis_row6">Z</td>
+<td id="speed_row6">12345</td>
+<td id="direction_row6">counter-clock</td>
+<td id="temperature_row6">48</td>
+<td id="vibrations_row6"></td>
+<td id="current_row6"></td>
+<td id="voltage_row6"></td>
+
+<td><button class="btnp" id="edit_button6" class="edit" onclick="edit_row('6')">&#x270E;</button></td>
+<td><button class="btn" id="save_button6" class="save" onclick="save_row('6')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('6')">&#10006;</button></td>
+</tr>
+
+
+
+
+<tr id="row7">
+<td id="motor_row7">ReMo003</td>
+<td id="axis_row7">X</td>
+<td id="speed_row7">12345</td>
+<td id="direction_row7">counter-clock</td>
+<td id="temperature_row7">56</td>
+<td id="vibrations_row7"></td>
+<td id="current_row7"></td>
+<td id="voltage_row7"></td>
+
+<td><button class="btnp" id="edit_button7" class="edit" onclick="edit_row('7')">&#x270E;</button></td>
+<td><button class="btn" id="save_button7" class="save" onclick="save_row('7')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('7')">&#10006;</button></td>
+</tr>
+
+<tr id="row8">
+<td id="motor_row8">ReMo003</td>
+<td id="axis_row8">Y</td>
+<td id="speed_row8">12345</td>
+<td id="direction_row8">clock</td>
+<td id="temperature_row8">57</td>
+<td id="vibrations_row8"></td>
+<td id="current_row8"></td>
+<td id="voltage_row8"></td>
+
+<td><button class="btnp" id="edit_button8" class="edit" onclick="edit_row('8')">&#x270E;</button></td>
+<td><button class="btn" id="save_button8" class="save" onclick="save_row('8')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('8')">&#10006;</button></td>
+</tr>
+
+<tr id="row9">
+<td id="motor_row9">ReMo003</td>
+<td id="axis_row9">Z</td>
+<td id="speed_row9">12345</td>
+<td id="direction_row9">counter-clock</td>
+<td id="temperature_row9">58</td>
+<td id="vibrations_row9"></td>
+<td id="current_row9"></td>
+<td id="voltage_row9"></td>
+
+<td><button class="btnp" id="edit_button9" class="edit" onclick="edit_row('9')">&#x270E;</button></td>
+<td><button class="btn" id="save_button9" class="save" onclick="save_row('9')">&#10004;</button></td>
+<td><button class="btn" class="delete" onclick="delete_row('9')">&#10006;</button></td>
+</tr>
+
+
+
+
+<tr>
+<td><input type="text" id="new_motor"></td>
+<td><input type="text" id="new_axis"></td>
+<td><input type="text" id="new_speed"></td>
+<td><input type="text" id="new_direction"></td>
+<td><input type="text" id="new_temperature"></td>
+<td><input type="text" id="new_vibrations"></td>
+<td><input type="text" id="new_current"></td>
+<td><input type="text" id="new_voltage"></td>
+
+<td><button class="btn" class="add" onclick="add_row();"><i class="fa fa-plus"></i></button></td>
+</tr>
+
+</table>
+</div>
+
+
+<script>
+function edit_row(no)
+{
+ document.getElementById("edit_button"+no).style.display="none";
+ document.getElementById("save_button"+no).style.display="block";
+	
+ var motor=document.getElementById("motor_row"+no);
+ var axis=document.getElementById("axis_row"+no);
+ var speed=document.getElementById("speed_row"+no);
+ var direction=document.getElementById("direction_row"+no);
+ var temperature=document.getElementById("temperature_row"+no);
+ var vibrations=document.getElementById("vibrations_row"+no);
+ var current=document.getElementById("current_row"+no);
+ var voltage=document.getElementById("voltage_row"+no);
+	
+ var motor_data=motor.innerHTML;
+ var axis_data=axis.innerHTML;
+ var speed_data=speed.innerHTML;
+ var direction_data=direction.innerHTML;
+ var temperature_data=temperature.innerHTML;
+ var vibrations_data=vibrations.innerHTML;
+ var current_data=current.innerHTML;
+ var voltage_data=voltage.innerHTML;
+	
+ motor.innerHTML="<input type='text' id='motor_text"+no+"' value='"+motor_data+"'>";
+ axis.innerHTML="<input type='text' id='axis_text"+no+"' value='"+axis_data+"'>";
+ speed.innerHTML="<input type='text' id='speed_text"+no+"' value='"+speed_data+"'>";
+ direction.innerHTML="<input type='text' id='direction_text"+no+"' value='"+direction_data+"'>";
+ temperature.innerHTML="<input type='text' id='temperature_text"+no+"' value='"+temperature_data+"'>";
+ vibrations.innerHTML="<input type='text' id='vibrations_text"+no+"' value='"+vibrations_data+"'>";
+ current.innerHTML="<input type='text' id='current_text"+no+"' value='"+current_data+"'>";
+ voltage.innerHTML="<input type='text' id='voltage_text"+no+"' value='"+voltage_data+"'>";
+
+}
+
+function save_row(no)
+{
+ var motor_val=document.getElementById("motor_text"+no).value;
+ var axis_val=document.getElementById("axis_text"+no).value;
+ var speed_val=document.getElementById("speed_text"+no).value;
+ var direction_val=document.getElementById("direction_text"+no).value;
+ var temperature_val=document.getElementById("temperature_text"+no).value;
+ var vibrations_val=document.getElementById("vibrations_text"+no).value;
+ var current_val=document.getElementById("current_text"+no).value;
+ var voltage_val=document.getElementById("voltage_text"+no).value;
+
+ document.getElementById("motor_row"+no).innerHTML=motor_val;
+ document.getElementById("axis_row"+no).innerHTML=axis_val;
+ document.getElementById("speed_row"+no).innerHTML=speed_val;
+ document.getElementById("direction_row"+no).innerHTML=direction_val;
+ document.getElementById("temperature_row"+no).innerHTML=temperature_val;
+ document.getElementById("vibrations_row"+no).innerHTML=vibrations_val;
+ document.getElementById("current_row"+no).innerHTML=current_val;
+ document.getElementById("voltage_row"+no).innerHTML=voltage_val;
+
+ document.getElementById("edit_button"+no).style.display="block";
+ document.getElementById("save_button"+no).style.display="block";
+}
+
+function delete_row(no)
+{
+ document.getElementById("row"+no+"").outerHTML="";
+}
+
+function add_row()
+{
+ var new_motor=document.getElementById("new_motor").value;
+ var new_axis=document.getElementById("new_axis").value;
+ var new_speed=document.getElementById("new_speed").value;
+ var new_direction=document.getElementById("new_direction").value;
+ var new_temperature=document.getElementById("new_temperature").value;
+ var new_vibrations=document.getElementById("new_vibrations").value;
+ var new_current=document.getElementById("new_current").value;
+ var new_voltage=document.getElementById("new_voltage").value;
+	
+ var tablen=document.getElementById("data_tablen");
+ var tablen_len=(tablen.rows.length)-1;
+ var row = tablen.insertRow(tablen_len).outerHTML="<tr id='row"+tablen_len+"'><td id='motor_row"+tablen_len+"'>"+new_motor+"</td><td id='axis_row"+tablen_len+"'>"+new_axis+"</td><td id='speed_row"+tablen_len+"'>"+new_speed+"</td><td id='direction_row"+tablen_len+"'>"+new_direction+"</td><td id='temperature_row"+tablen_len+"'>"+new_temperature+"</td><td id='vibrations_row"+tablen_len+"'>"+new_vibrations+"</td><td id='current_row"+tablen_len+"'>"+new_current+"</td><td id='voltage_row"+tablen_len+"'>"+new_voltage+"</td><td><input type='button' class='btnp' id='edit_button"+tablen_len+"' value='&#x270E;' class='edit' onclick='edit_row("+tablen_len+")'></td>  <td><input type='button' class='btn' id='save_button"+tablen_len+"' value='&#10004;' class='save' onclick='save_row("+tablen_len+")'></td>  <td><input type='button' class='btn' value=' &#10006;' class='delete' onclick='delete_row("+tablen_len+")'></td></tr>"; 
+
+ document.getElementById("new_motor").value="";
+ document.getElementById("new_axis").value="";
+ document.getElementById("new_speed").value="";
+ document.getElementById("new_direction").value="";
+ document.getElementById("new_temperature").value="";
+ document.getElementById("new_vibrations").value="";
+ document.getElementById("new_current").value="";
+ document.getElementById("new_voltage").value="";
+}
+</script>
+<br>
+<br>
+
+<!-- Tabular Data END ------------------------------------------------------------------------->
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<hr class="solid">
+
+</div>
+<!-- Masters Page END-->
+
+
+
+
+<div id="Provision Drives" class="w3-container tab" style="display:none">
+<!-- Provision Drives Page Content-->
+  <h2>Provision Drives</h2>
+</div>
+
+<!-- Provision Drives Page END-->
+
+
+
+
+<!-- Script for all 3 tabs: Home, Masters and Provision Drives -->
+<script>
+function opentab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(tabName).style.display = "block";  
+}
+</script>
+<!-- Script END -->
+
+
+
+
+<!-- Footer -->
+<div class="footer">
+  <p>Powered by ReMoNet®, © Shalaka Connected Devices
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</div>
+<!-- Footer END -->
+
+</body> 
+</html>
